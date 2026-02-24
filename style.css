@@ -2,9 +2,9 @@
 /* --- WOLF-RAGE ULTIMATE DARK MODE (Šablona Step) --- */
 
 /* 1. GLOBÁLNÍ POZADÍ A KONTEJNERY */
-html, body, #outer-wrapper, #wrapper, .content-wrapper, #content, 
+html, body, .outer-wrapper, .wrapper, .content-wrapper, .content, 
 .body-banners, .index-content-wrapper, .footer-top, .footer-bottom, 
-.header-top, #header, .navigation-in, .bg-body, .main-content,
+.header-top, .header, .navigation-in, .bg-body, .main-content,
 .box, .box-bg-variant, .tab-content, .tab-pane, .shp-tabs-holder, 
 .shp-tabs-wrapper, .product-item, .p, .category-header, .well, 
 .shipping-billing-table, .cart-inner, .order-summary,
