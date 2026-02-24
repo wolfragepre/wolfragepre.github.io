@@ -1,32 +1,69 @@
 <style>
-/* --- WOLF-RAGE ULTIMATE DARK MODE (Šablona Step - Final Master) --- */
+/* --- WOLF-RAGE NUKLEÁRNÍ DARK MODE (OPRAVA SHOPTETU) --- */
 
-/* 1. TOTÁLNÍ TMA: POZADÍ A KONTEJNERY */
-/* Přidány specifické třídy ze zdrojáku jako container--bannersBenefit a další */
-html, body, #outer-wrapper, #wrapper, .content-wrapper, #content, 
-.body-banners, .index-content-wrapper, .footer-top, .footer-bottom, 
-.header-top, #header, .navigation-in, .bg-body, .main-content,
-.box, .box-bg-variant, .tab-content, .tab-pane, .shp-tabs-holder, 
-.shp-tabs-wrapper, .product-item, .p, .category-header, .well, 
-.shipping-billing-table, .cart-inner, .order-summary,
-.content-window-in, .search-window-in, .cart-window-in, .dialog__wrapper, 
-.modal-content, .m-search-window, .login-window, .dropdown-menu,
-.overall-wrapper, .container--bannersBenefit, .benefitBanner {
+/* 1. ATOMOVÁ BOMBA NA POZADÍ (Přebití skrytého Shoptet kódu pro PC) */
+html, body, body.desktop, .overall-wrapper, #content-wrapper, .content-wrapper-in, #content, .main-content {
     background-color: #000000 !important;
-    background: #000000 !important;
     background-image: none !important;
-    border-color: #222222 !important;
-    box-shadow: none !important;
 }
 
-/* 2. TEXTY, NADPISY A CENY */
-body, p, h1, h2, h3, h4, h5, span, li, a, label, .product-name, 
-.price-final, .p-name, .p-final-price, .header-contact, .window-title,
-.cart-fee, .summary-item, .price-label, .total-price, .benefitBanner__title, .benefitBanner__data {
+@media (min-width: 992px) {
+    body, body.desktop { 
+        background-color: #000000 !important; 
+        background-image: none !important; 
+    }
+}
+
+/* 2. BOČNÍ ZÁLOŽKA A KATEGORIE (Levý sloupec) */
+#sidebar, .sidebar-left, .box, .box-categories, .box-bg-variant, .box-filters {
+    background-color: #000000 !important;
+    border: none !important;
+}
+
+#categories ul li a, .box-categories .categories a, #categories .topic a {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-bottom: 1px solid #1a1a1a !important;
+}
+
+#categories .topic.active a, #categories a:hover {
+    color: #cc0000 !important;
+    background-color: #111111 !important;
+    border-left: 3px solid #cc0000 !important;
+}
+
+/* 3. PŘEDNÍ ŘADA TŘÍDĚNÍ (Od nejlevnějšího, novinky atd.) */
+.category-header, .filters-wrapper, .sorting-wrapper, .filter-section, #category-header {
+    background-color: #000000 !important;
+    border: 1px solid #222222 !important;
     color: #ffffff !important;
 }
 
-/* 3. AGRESIVNÍ NEON TLAČÍTKO "DO KOŠÍKU" */
+.sorting-wrapper select, .sorting-wrapper .form-control {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+    border: 1px solid #444444 !important;
+}
+
+.btn-sorting, .sorting-wrapper .btn {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+}
+
+.btn-sorting.active, .btn-sorting:hover, .sorting-wrapper .btn:hover {
+    background-color: #cc0000 !important;
+    color: #ffffff !important;
+    border-color: #ff0000 !important;
+}
+
+/* 4. ZÁKLADNÍ TEXTY A NADPISY */
+body, p, h1, h2, h3, h4, h5, span, li, a, label, .product-name, 
+.price-final, .p-name, .p-final-price, .header-contact, .window-title {
+    color: #ffffff !important;
+}
+
+/* 5. ZÁŘÍCÍ TLAČÍTKO "DO KOŠÍKU" */
 .add-to-cart-button, .btn-conversion, button[data-testid="buttonAddToCart"], .btn-login {
     background: #cc0000 !important;
     background-image: linear-gradient(180deg, #ff0000 0%, #880000 100%) !important;
@@ -46,7 +83,7 @@ body, p, h1, h2, h3, h4, h5, span, li, a, label, .product-name,
     transform: scale(1.03) translateY(-2px);
 }
 
-/* 4. TLAČÍTKO DETAIL A OSTATNÍ SYSTÉMOVÉ PRVKY */
+/* 6. SYSTÉMOVÁ TLAČÍTKA A DETAIL */
 .btn-detail, .p-detail-link, .btn-default, .btn-primary, button, 
 input[type="button"], input[type="submit"], .login-window .btn, .btn-secondary {
     background-color: #1a1a1a !important;
@@ -63,49 +100,22 @@ input[type="button"], input[type="submit"], .login-window .btn, .btn-secondary {
     color: #ffffff !important;
 }
 
-/* 5. AKTIVNÍ PRVKY, TABY A MENU */
-.shp-tab { background-color: #000000 !important; border: 1px solid #222222 !important; }
-.shp-tab.active, .shp-tab.active .shp-tab-link {
-    background-color: #cc0000 !important;
+/* 7. OSTATNÍ FORMULÁŘE A VYSKAKOVACÍ OKNA (Přihlášení, košík) */
+.form-control, input, select, textarea, .quantity input.amount,
+.dialog, .dialog__wrapper, .dialog__content,
+.content-window-in, .search-window-in, .cart-window-in, .modal-content {
+    background-color: #000000 !important;
     color: #ffffff !important;
-    border-color: #ff0000 !important;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-}
-.shp-tab-link { background: none !important; color: #ffffff !important; }
-
-/* 6. FORMULÁŘE (PŘIHLÁŠENÍ, VYHLEDÁVÁNÍ) */
-.form-control, input, select, textarea, .quantity input.amount {
-    background-color: #111111 !important;
-    color: #ffffff !important;
-    border: 1px solid #333333 !important;
-}
-input:focus, select:focus { border-color: #cc0000 !important; box-shadow: 0 0 10px rgba(204, 0, 0, 0.5) !important; }
-
-/* 7. FILTR CENY A UI PRVKY */
-.ui-slider.ui-widget-content { background: #222222 !important; border: none !important; height: 8px !important; }
-.ui-slider .ui-slider-range { background: #cc0000 !important; }
-.ui-slider .ui-slider-handle {
-    background: #ff0000 !important;
-    border: 2px solid #ffffff !important;
-    border-radius: 50% !important;
-    box-shadow: 0 0 10px #ff0000 !important;
+    border-color: #333333 !important;
 }
 
-/* 8. PATIČKA (FOOTER) A DROBNOSTI */
-footer, #footer, .footer, .footer-bottom, .footer-standard { 
+/* 8. PATIČKA A BENEFITY (Doprava, Výroba) */
+footer, #footer, .footer, .footer-bottom, .footer-standard, 
+.container--bannersBenefit, .benefitBanner, .benefitBanner__item { 
     background-color: #000000 !important; 
-    border-top: 1px solid #222222 !important; 
+    border-color: #222222 !important; 
 }
+
+.benefitBanner__title, .benefitBanner__data { color: #ffffff !important; }
 .close-button, .dialog__close, .js-close-window, .toggle-window-arr { filter: invert(1); }
-
-/* 9. BENEFIT BANNERS (Ty 3 boxy pod karuselem) */
-.benefitBanner__item {
-    background-color: #000000 !important;
-    border: 1px solid #222222 !important;
-}
-
-/* 10. OPRAVA BÍLÉHO POZADÍ PŘIHLÁŠENÍ (Dialog) */
-.dialog, .dialog__wrapper, .dialog__content {
-    background-color: #000000 !important;
-}
 </style>
