@@ -1,9 +1,30 @@
 <style>
-/* --- WOLF-RAGE NUKLEÁRNÍ DARK MODE (OPRAVA SHOPTETU) --- */
+/* --- WOLF-RAGE NUKLEÁRNÍ DARK MODE V2 (Konečná likvidace bílého středu) --- */
 
-/* 1. ATOMOVÁ BOMBA NA POZADÍ (Přebití skrytého Shoptet kódu pro PC) */
-html, body, body.desktop, .overall-wrapper, #content-wrapper, .content-wrapper-in, #content, .main-content {
+/* 1. TOTÁLNÍ LIKVIDACE BÍLÉHO STŘEDU A KATEGORIÍ (Matrioška efekt) */
+html, body, body.desktop, 
+.overall-wrapper, 
+#content-wrapper, 
+.content-wrapper, 
+.content-wrapper-in, 
+#content, 
+.content, 
+.main-content,
+.index-content-wrapper,
+.container_resetted,
+.category-top,
+.category-header,
+.category-title,
+.products-page,
+.type-category,
+.type-index,
+.products-block,
+.tab-content,
+.tab-pane,
+.bg-white,
+.site-wrapper {
     background-color: #000000 !important;
+    background: #000000 !important;
     background-image: none !important;
 }
 
@@ -17,6 +38,7 @@ html, body, body.desktop, .overall-wrapper, #content-wrapper, .content-wrapper-i
 /* 2. BOČNÍ ZÁLOŽKA A KATEGORIE (Levý sloupec) */
 #sidebar, .sidebar-left, .box, .box-categories, .box-bg-variant, .box-filters {
     background-color: #000000 !important;
+    background: #000000 !important;
     border: none !important;
 }
 
@@ -32,9 +54,10 @@ html, body, body.desktop, .overall-wrapper, #content-wrapper, .content-wrapper-i
     border-left: 3px solid #cc0000 !important;
 }
 
-/* 3. PŘEDNÍ ŘADA TŘÍDĚNÍ (Od nejlevnějšího, novinky atd.) */
-.category-header, .filters-wrapper, .sorting-wrapper, .filter-section, #category-header {
+/* 3. PŘEDNÍ ŘADA TŘÍDĚNÍ A ZÁLOŽKY (Od nejlevnějšího, novinky atd.) */
+.category-header, .filters-wrapper, .sorting-wrapper, .filter-section, #category-header, .shp-tabs-wrapper {
     background-color: #000000 !important;
+    background: #000000 !important;
     border: 1px solid #222222 !important;
     color: #ffffff !important;
 }
@@ -83,9 +106,9 @@ body, p, h1, h2, h3, h4, h5, span, li, a, label, .product-name,
     transform: scale(1.03) translateY(-2px);
 }
 
-/* 6. SYSTÉMOVÁ TLAČÍTKA A DETAIL */
+/* 6. SYSTÉMOVÁ TLAČÍTKA A DETAIL PRODUKTU */
 .btn-detail, .p-detail-link, .btn-default, .btn-primary, button, 
-input[type="button"], input[type="submit"], .login-window .btn, .btn-secondary {
+input[type="button"], input[type="submit"], .login-window .btn, .btn-secondary, .p {
     background-color: #1a1a1a !important;
     color: #ffffff !important;
     border: 1px solid #cc0000 !important;
@@ -100,11 +123,19 @@ input[type="button"], input[type="submit"], .login-window .btn, .btn-secondary {
     color: #ffffff !important;
 }
 
+/* Karta produktu (aby nebyla bílá) */
+.product .p {
+    background-color: #000000 !important;
+    background: #000000 !important;
+    border: 1px solid #222222 !important;
+}
+
 /* 7. OSTATNÍ FORMULÁŘE A VYSKAKOVACÍ OKNA (Přihlášení, košík) */
 .form-control, input, select, textarea, .quantity input.amount,
-.dialog, .dialog__wrapper, .dialog__content,
+.dialog, .dialog__wrapper, .dialog__content, .dialog__body,
 .content-window-in, .search-window-in, .cart-window-in, .modal-content {
     background-color: #000000 !important;
+    background: #000000 !important;
     color: #ffffff !important;
     border-color: #333333 !important;
 }
@@ -113,6 +144,7 @@ input[type="button"], input[type="submit"], .login-window .btn, .btn-secondary {
 footer, #footer, .footer, .footer-bottom, .footer-standard, 
 .container--bannersBenefit, .benefitBanner, .benefitBanner__item { 
     background-color: #000000 !important; 
+    background: #000000 !important;
     border-color: #222222 !important; 
 }
 
