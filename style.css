@@ -1,6 +1,6 @@
 <style>
   /* Celý web a vnitřní obsah */
-  html, body, #outer-wrapper, #wrapper, .content-wrapper, #content, .body-banners {
+  html, body, #outer-wrapper, #wrapper, .content-wrapper, #content-wrapper, #content, .body-banners, .category-title {
     background-color: #000000 !important;
   }
 
