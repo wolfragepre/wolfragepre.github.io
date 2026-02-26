@@ -706,4 +706,59 @@ ul.shp-tabs {
     border: 1px solid #cc0000 !important;
 }
 
+/* ==========================================
+   NOČNÍ OPRAVA: ŘAZENÍ, BÍLÝ ČTVEREČEK A ZÁLOŽKY
+   ========================================== */
+
+/* 1. ŘAZENÍ (Nejlevnější atd.) - Totální přebití Bootstrap tlačítka */
+.category-header .bootstrap-select.btn-group .btn.btn-default,
+.category-header .bootstrap-select > .btn {
+    background-color: #111111 !important;
+    background: #111111 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+    text-shadow: none !important;
+}
+
+/* 2. BÍLÝ ČTVEREČEK ZA SLIDEREM (A oprava posunutí) */
+.price-range, 
+.price-range-filter, 
+.slider-wrapper, 
+.filter-section .price-range-slider {
+    background-color: transparent !important;
+    background: transparent !important;
+    padding-bottom: 10px !important;
+}
+
+/* Srovnání slideru na střed, aby neuhýbal */
+.ui-slider.ui-slider-horizontal {
+    margin: 15px 5px 10px 5px !important;
+}
+
+/* 3. ZÁLOŽKY ÚVODNÍ STRANA (Akce, Novinky - Zničení bílého pozadí odkazu) */
+.homepage-tabs-wrapper .shp-tabs li.shp-tab a.shp-tab-link,
+#homepage-tabs li.shp-tab a.shp-tab-link,
+.shp-tabs li.shp-tab a.shp-tab-link {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: #ffffff !important;
+}
+
+/* Neaktivní záložka celkově */
+.homepage-tabs-wrapper .shp-tabs li.shp-tab,
+#homepage-tabs li.shp-tab {
+    background-color: #111111 !important;
+    background: #111111 !important;
+}
+
+/* Aktivní záložka celkově (Agresivní červená) */
+.homepage-tabs-wrapper .shp-tabs li.shp-tab.active,
+#homepage-tabs li.shp-tab.active,
+.shp-tabs li.shp-tab.active a.shp-tab-link {
+    background-color: #cc0000 !important;
+    background: #cc0000 !important;
+    background-image: linear-gradient(180deg, #cc0000 0%, #880000 100%) !important;
+    color: #ffffff !important;
+}
 </style>
