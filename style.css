@@ -546,5 +546,164 @@ ul.shp-tabs {
     border: 1px solid #cc0000 !important;
 }
 
+/* ==========================================
+   FINÁLNÍ VYLADĚNÍ: ŘAZENÍ, SLIDER A PŘIHLÁŠENÍ
+   ========================================== */
+
+/* 1. ŘAZENÍ KATEGORIÍ (Nejlevnější, Abecedně...) - Zničení zrádné bílé */
+.sorting-wrapper select, 
+.sorting-wrapper select option, 
+.bootstrap-select .btn,
+.bootstrap-select .dropdown-menu,
+.bootstrap-select .dropdown-menu > li > a,
+.bootstrap-select .dropdown-menu > li > a span.text,
+.bootstrap-select .filter-option,
+.bootstrap-select .filter-option-inner-inner {
+    background-color: #111111 !important;
+    background: #111111 !important;
+    color: #ffffff !important;
+    border-color: #333333 !important;
+    text-shadow: none !important; /* Shoptet sem občas cpe bílý stín textu */
+}
+
+/* Když na položku v řazení najedeš nebo je vybraná */
+.bootstrap-select .dropdown-menu > li.selected > a,
+.bootstrap-select .dropdown-menu > li.selected > a span.text,
+.bootstrap-select .dropdown-menu > li > a:hover,
+.bootstrap-select .dropdown-menu > li > a:hover span.text {
+    background-color: #cc0000 !important;
+    background: #cc0000 !important;
+    color: #ffffff !important;
+}
+
+/* 2. ELEGANTNÍ A OSTRÝ SLIDER CENY */
+.ui-slider.ui-slider-horizontal {
+    background: #222222 !important;
+    border: none !important;
+    height: 6px !important; /* Tenčí, modernější linka */
+    border-radius: 3px !important;
+    margin-top: 12px !important; /* Lepší odsazení */
+}
+.ui-slider .ui-slider-range {
+    background: #cc0000 !important; /* Agresivní červená stopa */
+    border-radius: 3px !important;
+}
+.ui-slider .ui-slider-handle {
+    background: #ff0000 !important;
+    border: 2px solid #000000 !important; /* Černý středový bod pro "oko" efekt */
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 50% !important;
+    top: -5px !important; /* Vystředění na hubenou linku */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8) !important;
+    cursor: pointer !important;
+    transition: background 0.2s ease !important;
+}
+.ui-slider .ui-slider-handle:hover {
+    background: #ffffff !important; /* Při najetí bleskově zbělá */
+    border-color: #ff0000 !important;
+}
+
+/* 3. PŘIHLÁŠENÍ K ÚČTU (Stejný styl jako Vyhledávání a Košík) */
+.dialog__wrapper, 
+.dialog__content--form,
+.login-window {
+    background-color: #000000 !important;
+    background: #000000 !important;
+    border: 1px solid #cc0000 !important; /* Shoda s košíkem */
+    border-radius: 0px !important; /* Ostré hrany jako košík */
+    box-shadow: none !important; /* Odstranění přeplácaných stínů */
+}
+
+.dialog__heading, 
+#loginHeading {
+    color: #cc0000 !important; /* Červený nadpis jako u košíku */
+    border-bottom: none !important; /* Čistší vzhled */
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+}
+
+/* Tmavé pozadí ZA vyskakovacím oknem přihlášení */
+.dialog.dialog--modal {
+    background: rgba(0, 0, 0, 0.85) !important;
+}
+/* ==========================================
+   OPRAVA 11: ZÁLOŽKY NA ÚVODNÍ STRÁNCE A ŠTÍTKY
+   ========================================== */
+
+/* 1. ZÁLOŽKY (Překlikávání Akční zboží / Novinky) */
+.homepage-tabs-wrapper, .shp-tabs-row, .shp-tabs-holder {
+    background: #000000 !important;
+    border: none !important;
+}
+
+ul.shp-tabs {
+    border-bottom: 2px solid #333333 !important; /* Tmavá linka pod záložkami */
+    margin-bottom: 20px !important;
+}
+
+/* Neaktivní záložka */
+.shp-tabs li.shp-tab {
+    background-color: #111111 !important;
+    border: 1px solid #333333 !important;
+    border-bottom: none !important;
+    margin-right: 5px !important;
+    border-radius: 4px 4px 0 0 !important; /* Mírně zakulacené rohy nahoře */
+}
+
+.shp-tabs li.shp-tab a.shp-tab-link {
+    color: #888888 !important; /* Šedý text, aby nevyřvával */
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    padding: 12px 25px !important;
+    transition: all 0.3s ease !important;
+}
+
+.shp-tabs li.shp-tab:hover a.shp-tab-link {
+    color: #ffffff !important; /* Rozsvítí se při najetí */
+}
+
+/* Aktivní (vybraná) záložka */
+.shp-tabs li.shp-tab.active {
+    background: linear-gradient(180deg, #cc0000 0%, #880000 100%) !important;
+    border-color: #ff0000 !important;
+    box-shadow: 0 -4px 15px rgba(204, 0, 0, 0.5) !important; /* Červená záře nahoru */
+}
+
+.shp-tabs li.shp-tab.active a.shp-tab-link {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8) !important;
+}
+
+/* 2. ŠTÍTKY PŘÍMO NA PRODUKTECH (Novinka, Tip, Akce) */
+.flags .flag {
+    text-transform: uppercase !important;
+    font-weight: 900 !important;
+    border-radius: 2px !important; /* Ostřejší hrany pro agresivnější look */
+    padding: 5px 10px !important;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important; /* Stín, aby vystouply z fotky */
+    letter-spacing: 1px !important;
+}
+
+/* Štítek: Novinka (Wolf-Rage Červená) */
+.flags .flag-new {
+    background-color: #cc0000 !important;
+    color: #ffffff !important;
+    border: 1px solid #ff0000 !important;
+}
+
+/* Štítek: Tip (Temně šedá) */
+.flags .flag-tip {
+    background-color: #1a1a1a !important; 
+    color: #ffffff !important;
+    border: 1px solid #444444 !important;
+}
+
+/* Štítek: Akce / Sleva (Černá s červeným textem) */
+.flags .flag-action, .flags .flag-discount {
+    background-color: #000000 !important;
+    color: #ff0000 !important;
+    border: 1px solid #cc0000 !important;
+}
 
 </style>
