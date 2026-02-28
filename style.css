@@ -1,5 +1,5 @@
 <style>
-/* --- WOLF-RAGE: ABSOLUTNÍ FLAT DARK MODE (PC & MOBIL) --- */
+/* --- WOLF-RAGE: KOMPLETNÍ FLAT DARK MODE (PC & MOBIL) --- */
 
 /* 1. ZABITÍ VŠECH BÍLÝCH PLOCH VŠUDE */
 html, body, body.desktop, .overall-wrapper, #wrapper, #outer-wrapper, 
@@ -14,7 +14,8 @@ html, body, body.desktop, .overall-wrapper, #wrapper, #outer-wrapper,
 dialog, dialog[open], .dialog, .dialog__wrapper, .dialog__content, .dialog__content--form, .dialog__body, .dialog__header, .login-window, .modal-content,
 #navigation, .navigation-in, .menu, .menu-level-1, .header-navigation, .overlay, .header-top, .navigation-wrapper,
 #colorbox, #cboxWrapper, #cboxContent, #cboxLoadedContent, .content-modal, .shoptet-modal-sm,
-.cookiesSetting, .cookiesSetting__item, .cookiesSetting__bottom {
+.cookiesSetting, .cookiesSetting__item, .cookiesSetting__bottom,
+.benefitBanner, .benefitBanner__item /* Vráceny benefity */ {
     background-color: #000000 !important;
     background: #000000 !important;
     background-image: none !important;
@@ -25,16 +26,17 @@ dialog, dialog[open], .dialog, .dialog__wrapper, .dialog__content, .dialog__cont
 /* 2. POJISTKA PRO MOBILY A TABLETY */
 @media (min-width: 0px) {
     body, body.desktop, .content-wrapper, #content, .content, .wide, .bg-white, .container, .row, .container_resetted { 
-        background-color: transparent !important; /* Aby prosvítala černá zespodu */
+        background-color: transparent !important; 
     }
 }
 
 /* 3. TEXTY, NADPISY A OPRAVA HÁČKŮ (PŘIHLÁŠENÍ) */
 body, p, h1, h2, h3, h4, h5, span, li, a, label, div, strong, b, em,
 .product-name, .p-name, .header-contact, .window-title, .menu-item a,
-.dialog__heading, #loginHeading, .content-modal h1, .description {
+.dialog__heading, #loginHeading, .content-modal h1, .description,
+.benefitBanner__title, .benefitBanner__data {
     color: #ffffff !important;
-    font-family: inherit !important; /* Oprava ošklivého fontu */
+    font-family: inherit !important; 
     text-shadow: none !important;
     text-transform: none !important;
 }
@@ -89,7 +91,6 @@ input.form-control:focus, select.form-control:focus, textarea.form-control:focus
     border-color: #cc0000 !important;
     outline: none !important;
 }
-/* Zrušení rámečku u modalu přihlášení */
 .dialog__wrapper, .dialog__content, .dialog__content--form, .login-window { border: none !important; padding: 15px !important; }
 
 /* 6. ŘAZENÍ KATEGORIÍ A ROLETKY */
@@ -99,7 +100,7 @@ input.form-control:focus, select.form-control:focus, textarea.form-control:focus
 .bootstrap-select .dropdown-menu > li > a { background: transparent !important; color: #ffffff !important; }
 .bootstrap-select .dropdown-menu > li.selected > a, .bootstrap-select .dropdown-menu > li > a:hover { background-color: #cc0000 !important; color: #ffffff !important; }
 
-/* 7. OPRAVA SLIDERU CENY (Bez bílých čtverečků, na střed) */
+/* 7. OPRAVA SLIDERU CENY */
 .price-range-filter, .price-range, .slider-wrapper, .filter-section .price-range-slider, .ui-widget-content {
     background-color: transparent !important; background: transparent !important; border: none !important; padding: 0 !important; margin: 0 !important;
 }
@@ -114,7 +115,6 @@ input.form-control:focus, select.form-control:focus, textarea.form-control:focus
     background-color: #000000 !important; border-color: #222222 !important; color: #ffffff !important;
 }
 .table-striped > tbody > tr:nth-of-type(odd), .cart-table tbody tr:nth-child(odd) { background-color: #080808 !important; }
-/* Kroky 1, 2, 3 v košíku */
 .cart-header, .cart-steps, .cart-header .step, .cart-steps .step {
     background-color: #000000 !important; border-bottom: 1px solid #333333 !important;
 }
@@ -122,13 +122,24 @@ input.form-control:focus, select.form-control:focus, textarea.form-control:focus
 .cart-header .step.active, .cart-steps .step.active, .cart-header .step.active span, .cart-steps .step.active span {
     color: #ffffff !important; border-bottom: 2px solid #cc0000 !important;
 }
-/* Vybraná Doprava a Platba */
 .radio-wrapper.active, .shipping-billing-table tr.active, .shipping-billing-table tr.active td {
     background-color: #111111 !important; border-left: 3px solid #cc0000 !important;
 }
 
-/* 9. PRODUKTY, KŘÍŽKY, IKONKY */
+/* 9. PRODUKTY A KŘÍŽKY */
 .product .p { background: #050505 !important; border: 1px solid #1a1a1a !important; border-radius: 2px !important; }
 .product .p:hover { border-color: #cc0000 !important; }
 .close-button, .dialog__close, .js-close-window, .menu-helper, .toggle-window-arr::before, #cboxClose { filter: invert(1) !important; background: transparent !important; border: none !important; }
+
+/* 10. VRÁCENO: ZÁLOŽKY NA ÚVODNÍ STRANĚ A ŠTÍTKY (NOVINKA, TIP) */
+.homepage-tabs-wrapper .shp-tabs li.shp-tab, #homepage-tabs li.shp-tab {
+    background-color: #111111 !important; border: 1px solid #333333 !important; border-bottom: none !important;
+}
+.homepage-tabs-wrapper .shp-tabs li.shp-tab a.shp-tab-link { background: transparent !important; color: #888888 !important; }
+.homepage-tabs-wrapper .shp-tabs li.shp-tab.active { background-color: #cc0000 !important; border-color: #ff0000 !important; }
+.homepage-tabs-wrapper .shp-tabs li.shp-tab.active a.shp-tab-link { color: #ffffff !important; }
+
+.flags .flag { text-transform: uppercase !important; font-weight: 900 !important; padding: 4px 8px !important; border-radius: 2px !important; }
+.flags .flag-new { background-color: #cc0000 !important; color: #ffffff !important; border: 1px solid #ff0000 !important; }
+.flags .flag-tip { background-color: #111111 !important; color: #ffffff !important; border: 1px solid #444444 !important; }
 </style>
