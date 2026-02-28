@@ -1,891 +1,181 @@
 <style>
-/* --- WOLF-RAGE: ULTIMATE DARK & CONVERSION MODE (FINÁLNÍ ČISTKA) --- */
+/* =========================================================
+   WOLF-RAGE MASTER TEMPLATE (DARK & CONVERSION MODE)
+   Design: Černá, Tmavě šedá, Čistá bílá, Agresivní červená
+   Cíl: Maximální konverze (tah na branku)
+   ========================================================= */
 
-/* 1. ZÁKLADNÍ KOSTRA (Odstranění hlavní bílé) */
-html, body, body.desktop, #wrapper, #outer-wrapper, 
+/* --- 1. GLOBÁLNÍ TEMNÁ KOSTRA (PC i Mobil) --- */
+html, body, body.desktop, .overall-wrapper, #wrapper, #outer-wrapper, 
 .content-wrapper, .content-wrapper-in, #content, .content, .main-content, .wide,
 .products-page, .products-block, .category-top, .category-header, #category-header,
-.bg-white, .container_resetted, .box, .site-wrapper {
+.bg-white, .container_resetted, .box, .site-wrapper, #sidebar, .sidebar-left, 
+.box-categories, .box-filters, .box-bg-variant, #footer, .footer, .footer-bottom, 
+.custom-footer, .footer-standard {
     background-color: #000000 !important;
     background: #000000 !important;
     background-image: none !important;
     border-color: #1a1a1a !important;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 991px) {
     body, body.desktop, .content-wrapper, #content, .content, .wide { 
-        background-color: #000000 !important; 
-        background: #000000 !important;
+        background-color: #000000 !important; background: #000000 !important;
+    }
+}
+@media screen and (max-width: 991px) {
+    html, body, .overall-wrapper, #content-wrapper, .main-content {
+        background-color: #000000 !important; background: #000000 !important;
     }
 }
 
-/* ==========================================
-   OPRAVA 1: PŘIHLÁŠENÍ, RYCHLÝ KOŠÍK, HLEDÁNÍ (MODALY)
-   ========================================== */
-.dialog, .dialog__wrapper, .dialog__content, .dialog__body, .dialog__header, .dialog__footer,
-.content-window-in, .search-window-in, .cart-window-in, .m-search-window, .modal-content, 
-.advanced-order, .login-window {
-    background-color: #000000 !important;
-    background: #000000 !important;
-    border: 1px solid #333333 !important;
+/* --- 2. ZÁKLADNÍ TEXTY A ČITELNOST --- */
+body, p, h1, h2, h3, h4, h5, span, li, a, label, .product-name, 
+.p-name, .header-contact, .window-title, .breadcrumb a, .breadcrumb span, 
+.description, .basic-description p, .benefitBanner__title, .benefitBanner__data {
     color: #ffffff !important;
 }
-
-/* ==========================================
-   OPRAVA 2: BOČNÍ BOX KATEGORIÍ A FOOTER
-   ========================================== */
-#sidebar, .sidebar-left, .box-categories, .box-filters, .box-bg-variant,
-#footer, .footer, .footer-bottom, .custom-footer, .footer-standard {
-    background-color: #000000 !important;
-    background: #000000 !important;
-    border-color: #222222 !important;
+/* Ceny musí křičet */
+.price-final, .p-final-price, .total-price, .cart-summary h3, .main-price {
+    color: #cc0000 !important;
+    font-weight: 900 !important;
 }
 
-/* ==========================================
-   OPRAVA 3: ZÁLOŽKY V PRODUKTU (SHP-TABS) A TŘÍDĚNÍ
-   ========================================== */
-.shp-tabs-wrapper, .tab-content, .tab-pane, #tab-content,
-.sorting-wrapper, .filters-wrapper, .filter-section {
-    background-color: #000000 !important;
-    background: #000000 !important;
-    border-color: #222222 !important;
-}
-
-/* Tlačítka pro zobrazení (list/grid control) */
-.type-control a, .list-type a, .btn-sorting {
-    background-color: #111111 !important;
-    border: 1px solid #333333 !important;
-    color: #ffffff !important;
-}
-.type-control a.active, .type-control a:hover, .btn-sorting.active, .btn-sorting:hover {
+/* --- 3. HLAVNÍ KONVERZNÍ TLAČÍTKA (Koupit, Zaplatit) --- */
+/* Jednoduchá, brutální a nepřehlédnutelná červená */
+.add-to-cart-button, .btn-conversion, button[data-testid="buttonAddToCart"],
+.next-step, .cart-next-step, .order-summary-btn {
     background-color: #cc0000 !important;
-    border-color: #ff0000 !important;
-}
-
-/* ==========================================
-   OPRAVA 4: SLIDER CENY (POSUVNÍK)
-   ========================================== */
-.ui-widget-content, .ui-slider { 
-    background: #222222 !important; 
-    border: none !important; 
-}
-.ui-slider-range { 
-    background: #cc0000 !important; 
-}
-.ui-slider-handle { 
-    background: #ff0000 !important; 
-    border: 2px solid #ffffff !important; 
-    border-radius: 50% !important;
-    box-shadow: 0 0 10px #ff0000 !important;
-}
-
-/* ------------------------------------------
-   TEXTY, INPUTY (Díry na psaní) A TLAČÍTKA
-   ------------------------------------------ */
-body, p, h1, h2, h3, h4, h5, span, li, a, label, 
-.product-name, .price-final, .p-name, .p-final-price, 
-.header-contact, .window-title, .breadcrumb a, .breadcrumb span, .description {
-    color: #ffffff !important;
-}
-
-/* Inputy (Díry na psaní) - Tmavé s červeným focusem */
-.search-form input, .form-control, select, textarea, .quantity input.amount {
-    background-color: #0a0a0a !important;
-    color: #ffffff !important;
-    border: 2px solid #222222 !important;
-    border-radius: 6px !important;
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.8) !important;
-    transition: all 0.3s ease !important;
-}
-.search-form input:focus, .form-control:focus {
-    border-color: #cc0000 !important;
-    box-shadow: 0 0 12px rgba(204, 0, 0, 0.6), inset 0 2px 5px rgba(0,0,0,0.8) !important;
-    outline: none !important;
-}
-
-/* TLAČÍTKO DO KOŠÍKU - Hlavní tahák */
-.add-to-cart-button, .btn-conversion, button[data-testid="buttonAddToCart"] {
-    background: linear-gradient(180deg, #ff0000 0%, #990000 100%) !important;
+    background-image: none !important;
     border: none !important;
-    border-bottom: 4px solid #550000 !important;
+    border-bottom: 3px solid #880000 !important; /* Mírný 3D efekt */
     color: #ffffff !important;
     text-transform: uppercase !important;
     font-weight: 900 !important;
-    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.5) !important;
-    transition: all 0.2s ease-in-out !important;
-    border-radius: 6px !important;
-    font-size: 1.1em !important;
+    letter-spacing: 1px !important;
+    border-radius: 4px !important;
     padding: 12px 24px !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.4) !important;
 }
-.add-to-cart-button:hover, .btn-conversion:hover {
-    background: linear-gradient(180deg, #ff3333 0%, #cc0000 100%) !important;
-    box-shadow: 0 6px 25px rgba(255, 0, 0, 0.9) !important;
+.add-to-cart-button:hover, .next-step:hover, .order-summary-btn:hover {
+    background-color: #ff0000 !important;
+    border-bottom-color: #aa0000 !important;
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.7) !important;
     transform: translateY(-2px);
+    color: #ffffff !important;
 }
-.add-to-cart-button:active {
+.add-to-cart-button:active, .next-step:active {
     transform: translateY(2px);
-    border-bottom: 0px solid #550000 !important;
-    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.5) !important;
+    border-bottom: 0 !important;
 }
 
-/* Sekundární tlačítka (Hledat, Detail, Zpět) */
-.btn-detail, .p-detail-link, .btn-default, .btn-primary, .btn-secondary, .toggle-window-arr {
+/* --- 4. SEKUNDÁRNÍ TLAČÍTKA (Detail, Zpět, Hledat, Řazení) --- */
+/* Černá s červeným detailem - neruší od nákupu */
+.btn-detail, .p-detail-link, .btn-default, .btn-primary, .btn-secondary, 
+.toggle-window-arr, .btn-sorting, .listSortingControl-name, .listSortingControl-price, 
+.type-control a, .list-type a, .dialog .btn-login, .login-window .btn-login {
     background-color: #111111 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    border: 1px solid #cc0000 !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+}
+.btn-detail:hover, .btn-default:hover, .btn-primary:hover, .btn-secondary:hover, 
+.toggle-window-arr:hover, .btn-sorting:hover, .dialog .btn-login:hover {
+    background-color: #cc0000 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 10px rgba(204, 0, 0, 0.5) !important;
+}
+
+/* --- 5. FORMULÁŘE A INPUTY (E-mail, Hledání) --- */
+.search-form input, .form-control, select, textarea, .quantity input.amount,
+.dialog input.form-control, .login-window input.form-control, .input-wrapper input {
+    background-color: #0a0a0a !important;
     color: #ffffff !important;
     border: 1px solid #333333 !important;
     border-radius: 4px !important;
+    padding: 10px !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.8) !important;
+    transition: all 0.2s ease !important;
 }
-.btn-detail:hover, .btn-default:hover, .btn-primary:hover, .btn-secondary:hover {
-    background-color: #cc0000 !important;
-    border-color: #ff0000 !important;
+.search-form input:focus, .form-control:focus {
+    border-color: #cc0000 !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(204, 0, 0, 0.6) !important;
+    outline: none !important;
 }
 
-/* Vystouplé karty produktů */
+/* --- 6. KARTA PRODUKTU (Vystouplá a čistá) --- */
 .product .p, .product-item {
     background-color: #050505 !important;
     border: 1px solid #1a1a1a !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.6) !important;
+    border-radius: 6px !important;
     transition: all 0.3s ease !important;
 }
 .product .p:hover {
     border-color: #cc0000 !important;
-    box-shadow: 0 8px 25px rgba(204, 0, 0, 0.3) !important;
-    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(204, 0, 0, 0.2) !important;
 }
-
-/* Křížky na zavření modalu (inverze na bílou) */
-.close-button, .dialog__close, .js-close-window { filter: invert(1); }
-
-/* ==========================================
-   OPRAVA 6: DETAIL PRODUKTU - ZÁLOŽKY A POPIS
-   ========================================== */
-.shp-tabs-wrapper.p-detail-tabs-wrapper,
-.p-detail-tabs-wrapper .row,
-.p-detail-tabs-wrapper .col-sm-12,
-.p-detail-tabs-wrapper .tab-content,
-.p-detail-tabs-wrapper .tab-pane,
-.description-inner,
-.basic-description {
-    background-color: #000000 !important;
-    background: #000000 !important;
-    border-color: #222222 !important;
-    box-shadow: none !important;
-}
-
-/* Vynucení bílé barvy pro všechny texty uvnitř popisu */
-.p-detail-tabs-wrapper .tab-content,
-.basic-description p, 
-.basic-description h3, 
-.basic-description strong,
-.basic-description span {
-    color: #ffffff !important;
-    background-color: transparent !important;
-}
-
-/* Upravení aktivní záložky "Popis", aby ladila k Wolf-Rage stylu */
-.p-detail-tabs .shp-tab.active, 
-.p-detail-tabs .shp-tab.active .shp-tab-link {
-    background-color: #cc0000 !important;
-    color: #ffffff !important;
-    border-color: #ff0000 !important;
-}
-
-/* ==========================================
-   OPRAVA 5: COLORBOX MODAL (Dotaz na prodejce, obrázky)
-   ========================================== */
-#colorbox, 
-#cboxWrapper, 
-#cboxContent, 
-#cboxLoadedContent, 
-.content-modal,
-.shoptet-modal-sm {
-    background-color: #000000 !important;
-    background: #000000 !important;
-}
-
-/* Texty uvnitř tohoto okna */
-.content-modal h1, 
-.content-modal p, 
-.content-modal label,
-#cboxTitle, 
-#cboxCurrent,
-#cboxLoadedContent {
-    color: #ffffff !important;
-}
-
-/* Odkaz na ochranu osobních údajů v modalu */
-.content-modal a {
-    color: #cc0000 !important;
-    text-decoration: underline !important;
-}
-
-/* Skrytí otravných bílých okrajů Colorboxu (Shoptet je skládá z obrázků) */
-#cboxTopLeft, #cboxTopCenter, #cboxTopRight,
-#cboxMiddleLeft, #cboxMiddleRight,
-#cboxBottomLeft, #cboxBottomCenter, #cboxBottomRight {
-    background: #000000 !important;
-    border: none !important;
-}
-
-/* Tlačítko zavřít dole */
-#cboxClose {
-    filter: invert(1); /* Přebarví černý křížek/text na bílo */
-    background-color: transparent !important;
-}
-
-/* ==========================================
-   OPRAVA 7: LIŠTA ŘAZENÍ (Nejlevnější, Nejnovější atd.)
-   ========================================== */
-/* Celý pruh s řazením */
-.category-header, 
-.category-header .row,
-.sorting-wrapper, 
-.filters-wrapper {
-    background-color: #000000 !important;
-    background: #000000 !important;
-    border-color: #222222 !important;
-}
-
-/* Skrytá Bootstrap tlačítka, která se tváří jako roletka */
-.category-header .bootstrap-select .btn.dropdown-toggle,
-.category-header select,
-.sorting-wrapper .form-control {
-    background-color: #111111 !important;
-    background: #111111 !important;
-    color: #ffffff !important;
-    border: 1px solid #333333 !important;
-}
-
-/* Otevřené rozbalovací menu (když na řazení klikneš) */
-.bootstrap-select .dropdown-menu,
-.dropdown-menu {
-    background-color: #111111 !important;
-    background: #111111 !important;
-    border: 1px solid #cc0000 !important; /* Agresivní červený rámeček */
-}
-
-/* Položky uvnitř menu (Nejlevnější, Nejnovější...) */
-.dropdown-menu > li > a {
-    color: #ffffff !important;
-    background-color: transparent !important;
-}
-
-/* Najetí myší na položku v menu */
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus,
-.dropdown-menu > .active > a {
-    background-color: #cc0000 !important;
-    background: #cc0000 !important;
-    color: #ffffff !important;
-}
-
-/* Přepínání mřížky/řádků */
-.list-type a, .type-control a {
-    background-color: #111111 !important;
-    border-color: #333333 !important;
-    color: #ffffff !important;
-}
-.list-type a.active, .type-control a.active,
-.list-type a:hover, .type-control a:hover {
-    background-color: #cc0000 !important;
-    border-color: #cc0000 !important;
-}
-
-/* ==========================================
-   OPRAVA 8: SLIDER CENY (Zlikvidování bílé stopy)
-   ========================================== */
-/* Tmavá dráha v pozadí */
-.price-range-slider,
-.ui-slider.ui-widget-content, 
-.ui-widget-content {
-    background-color: #222222 !important;
-    background: #222222 !important;
-    border: none !important;
-}
-
-/* Vyplněná "aktivní" část (červená stopa) */
-.ui-slider .ui-slider-range, 
-.ui-widget-header {
-    background-color: #cc0000 !important;
-    background: #cc0000 !important;
-}
-
-/* Ovládací kolečka */
-.ui-slider .ui-slider-handle {
-    background-color: #ff0000 !important;
-    background: #ff0000 !important;
-    border: 2px solid #ffffff !important;
-    box-shadow: 0 0 10px #ff0000 !important;
-    outline: none !important;
-}
-
-/* ==========================================
-   OPRAVA 9: POLOŽKY V KOŠÍKU (Zničení bílých řádků)
-   ========================================== */
-/* Hlavní tabulka košíku a její řádky/buňky */
-.cart-table, 
-.cart-table tbody, 
-.cart-table tbody tr, 
-.cart-table tbody td, 
-.cart-table th,
-.cart-item, 
-.cart-row,
-.checkout-box,
-.recapitulation-wrapper,
-.recapitulation-single {
-    background-color: #000000 !important;
-    background: #000000 !important;
-    border-color: #222222 !important;
-    color: #ffffff !important;
-}
-
-/* Zabití efektu "Zebry" (střídání světlých řádků) */
-.table-striped > tbody > tr:nth-of-type(odd),
-.table-striped > tbody > tr:nth-of-type(even),
-.cart-table tbody tr:nth-child(odd),
-.cart-table tbody tr:nth-child(even) {
-    background-color: #050505 !important; /* Velmi, velmi tmavá šedá pro jemné odlišení položek */
-    background: #050505 !important;
-}
-
-/* Texty, názvy produktů a ceny uvnitř košíku */
-.cart-table a, 
-.cart-item-name, 
-.cart-item-price,
-.main-price {
-    color: #ffffff !important;
-    background-color: transparent !important;
-}
-
-/* Křížek pro smazání položky z košíku (Agresivní červená) */
-.cart-item-remove, 
-.remove-item,
-.cart-table .remove a {
-    color: #cc0000 !important;
-    transition: all 0.2s ease;
-}
-.cart-item-remove:hover, 
-.remove-item:hover,
-.cart-table .remove a:hover {
-    color: #ff0000 !important;
-    transform: scale(1.2); /* Křížek se mírně zvětší, když na něj najedeš */
-}
-
-/* Zvýraznění celkové částky */
-.total-price, .cart-summary h3 {
-    color: #cc0000 !important;
-    font-weight: bold !important;
-}
-
-
-/* ==========================================
-   OPRAVA 10: LUXUSNÍ PŘIHLÁŠENÍ (TERMINÁL VZHLED)
-   ========================================== */
-
-/* Samotný box přihlášení - hloubka a červená záře */
-.dialog__content.dialog__content--form, 
-.login-window {
-    background: #080808 !important; /* Lehounce světlejší než absolutní tma pro 3D efekt */
-    border: 2px solid #cc0000 !important;
-    border-radius: 8px !important;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.9), 0 0 20px rgba(204,0,0,0.3) !important;
-    padding: 30px !important; /* Pořádný prostor, aby se to nemačkalo */
-}
-
-/* Nadpis "Přihlášení k vašemu účtu" */
-.dialog__heading, 
-#loginHeading {
-    color: #ffffff !important;
-    text-transform: uppercase !important;
-    font-weight: 900 !important;
-    text-align: center !important;
-    border-bottom: 2px solid #222222 !important;
-    padding-bottom: 15px !important;
-    margin-bottom: 25px !important;
-    letter-spacing: 1px !important;
-}
-
-/* Textová pole (E-mail a Heslo) - Větší a pohodlnější */
-.dialog input.form-control, 
-.login-window input.form-control {
-    background-color: #111111 !important;
-    border: 1px solid #333333 !important;
-    color: #ffffff !important;
-    padding: 15px !important; /* Větší prostor pro psaní */
-    height: auto !important;
-    font-size: 16px !important; /* Větší písmo */
-    border-radius: 4px !important;
-    margin-bottom: 10px !important;
-}
-
-/* Tlačítko Přihlásit se - Přes celou šířku a agresivní */
-.dialog .btn-login, 
-.login-window .btn-login,
-.dialog__body .btn-secondary {
-    background: linear-gradient(180deg, #ff0000 0%, #990000 100%) !important;
-    border: none !important;
-    border-bottom: 4px solid #550000 !important;
-    color: #ffffff !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    width: 100% !important; /* Roztáhne tlačítko přes celé okno */
-    padding: 15px !important;
-    font-size: 16px !important;
-    border-radius: 4px !important;
-    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.4) !important;
-    margin-top: 10px !important;
-}
-
-.dialog .btn-login:hover, 
-.login-window .btn-login:hover {
-    background: linear-gradient(180deg, #ff3333 0%, #cc0000 100%) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(204, 0, 0, 0.8) !important;
-}
-
-/* Odkazy: Nová registrace / Zapomenuté heslo */
-.password-helper {
-    display: flex !important;
-    justify-content: space-between !important; /* Rozhodí odkazy do stran */
-    margin-top: 20px !important;
-    padding-top: 15px !important;
-    border-top: 1px solid #222222 !important;
-}
-
-.password-helper a {
-    color: #888888 !important;
-    font-size: 14px !important;
-    text-decoration: none !important;
-    transition: color 0.2s ease !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-}
-
-.password-helper a:hover {
-    color: #ff0000 !important; /* Při najetí se rozsvítí červeně */
-    text-decoration: none !important;
-}
-
-/* ==========================================
-   OPRAVA 11: ZÁLOŽKY NA ÚVODNÍ STRÁNCE A ŠTÍTKY
-   ========================================== */
-
-/* 1. ZÁLOŽKY (Překlikávání Akční zboží / Novinky) */
-.homepage-tabs-wrapper, .shp-tabs-row, .shp-tabs-holder {
-    background: #000000 !important;
-    border: none !important;
-}
-
-ul.shp-tabs {
-    border-bottom: 2px solid #333333 !important; /* Tmavá linka pod záložkami */
-    margin-bottom: 20px !important;
-}
-
-/* Neaktivní záložka */
-.shp-tabs li.shp-tab {
-    background-color: #111111 !important;
-    border: 1px solid #333333 !important;
-    border-bottom: none !important;
-    margin-right: 5px !important;
-    border-radius: 4px 4px 0 0 !important; /* Mírně zakulacené rohy nahoře */
-}
-
-.shp-tabs li.shp-tab a.shp-tab-link {
-    color: #888888 !important; /* Šedý text, aby nevyřvával */
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    padding: 12px 25px !important;
-    transition: all 0.3s ease !important;
-}
-
-.shp-tabs li.shp-tab:hover a.shp-tab-link {
-    color: #ffffff !important; /* Rozsvítí se při najetí */
-}
-
-/* Aktivní (vybraná) záložka */
-.shp-tabs li.shp-tab.active {
-    background: linear-gradient(180deg, #cc0000 0%, #880000 100%) !important;
-    border-color: #ff0000 !important;
-    box-shadow: 0 -4px 15px rgba(204, 0, 0, 0.5) !important; /* Červená záře nahoru */
-}
-
-.shp-tabs li.shp-tab.active a.shp-tab-link {
-    color: #ffffff !important;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8) !important;
-}
-
-/* 2. ŠTÍTKY PŘÍMO NA PRODUKTECH (Novinka, Tip, Akce) */
+/* Štítky na fotce (Novinka, Tip) */
 .flags .flag {
-    text-transform: uppercase !important;
-    font-weight: 900 !important;
-    border-radius: 2px !important; /* Ostřejší hrany pro agresivnější look */
-    padding: 5px 10px !important;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important; /* Stín, aby vystouply z fotky */
-    letter-spacing: 1px !important;
+    text-transform: uppercase !important; font-weight: 900 !important; border-radius: 2px !important;
 }
+.flags .flag-new { background-color: #cc0000 !important; color: #ffffff !important; border: 1px solid #ff0000 !important; }
+.flags .flag-tip { background-color: #111111 !important; color: #ffffff !important; border: 1px solid #444444 !important; }
 
-/* Štítek: Novinka (Wolf-Rage Červená) */
-.flags .flag-new {
-    background-color: #cc0000 !important;
-    color: #ffffff !important;
-    border: 1px solid #ff0000 !important;
-}
-
-/* Štítek: Tip (Temně šedá) */
-.flags .flag-tip {
-    background-color: #1a1a1a !important; 
-    color: #ffffff !important;
-    border: 1px solid #444444 !important;
-}
-
-/* Štítek: Akce / Sleva (Černá s červeným textem) */
-.flags .flag-action, .flags .flag-discount {
-    background-color: #000000 !important;
-    color: #ff0000 !important;
-    border: 1px solid #cc0000 !important;
-}
-
-/* ==========================================
-   FINÁLNÍ VYLADĚNÍ: ŘAZENÍ, SLIDER A PŘIHLÁŠENÍ
-   ========================================== */
-
-/* 1. ŘAZENÍ KATEGORIÍ (Nejlevnější, Abecedně...) - Zničení zrádné bílé */
-.sorting-wrapper select, 
-.sorting-wrapper select option, 
-.bootstrap-select .btn,
-.bootstrap-select .dropdown-menu,
-.bootstrap-select .dropdown-menu > li > a,
-.bootstrap-select .dropdown-menu > li > a span.text,
-.bootstrap-select .filter-option,
-.bootstrap-select .filter-option-inner-inner {
-    background-color: #111111 !important;
-    background: #111111 !important;
-    color: #ffffff !important;
-    border-color: #333333 !important;
-    text-shadow: none !important; /* Shoptet sem občas cpe bílý stín textu */
-}
-
-/* Když na položku v řazení najedeš nebo je vybraná */
-.bootstrap-select .dropdown-menu > li.selected > a,
-.bootstrap-select .dropdown-menu > li.selected > a span.text,
-.bootstrap-select .dropdown-menu > li > a:hover,
-.bootstrap-select .dropdown-menu > li > a:hover span.text {
-    background-color: #cc0000 !important;
-    background: #cc0000 !important;
-    color: #ffffff !important;
-}
-
-/* 2. ELEGANTNÍ A OSTRÝ SLIDER CENY */
-.ui-slider.ui-slider-horizontal {
-    background: #222222 !important;
-    border: none !important;
-    height: 6px !important; /* Tenčí, modernější linka */
-    border-radius: 3px !important;
-    margin-top: 12px !important; /* Lepší odsazení */
-}
-.ui-slider .ui-slider-range {
-    background: #cc0000 !important; /* Agresivní červená stopa */
-    border-radius: 3px !important;
-}
-.ui-slider .ui-slider-handle {
-    background: #ff0000 !important;
-    border: 2px solid #000000 !important; /* Černý středový bod pro "oko" efekt */
-    width: 16px !important;
-    height: 16px !important;
-    border-radius: 50% !important;
-    top: -5px !important; /* Vystředění na hubenou linku */
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8) !important;
-    cursor: pointer !important;
-    transition: background 0.2s ease !important;
-}
-.ui-slider .ui-slider-handle:hover {
-    background: #ffffff !important; /* Při najetí bleskově zbělá */
-    border-color: #ff0000 !important;
-}
-
-/* 3. PŘIHLÁŠENÍ K ÚČTU (Stejný styl jako Vyhledávání a Košík) */
-.dialog__wrapper, 
-.dialog__content--form,
-.login-window {
+/* --- 7. MODALY A VYSKAKOVACÍ OKNA (Přihlášení, Košík, Colorbox) --- */
+.dialog__wrapper, .dialog__content--form, .login-window, .modal-content, 
+.content-window-in, .search-window-in, .cart-window-in, .m-search-window,
+#colorbox, #cboxWrapper, #cboxContent, #cboxLoadedContent, .content-modal, .shoptet-modal-sm {
     background-color: #000000 !important;
     background: #000000 !important;
-    border: 1px solid #cc0000 !important; /* Shoda s košíkem */
-    border-radius: 0px !important; /* Ostré hrany jako košík */
-    box-shadow: none !important; /* Odstranění přeplácaných stínů */
-}
-
-.dialog__heading, 
-#loginHeading {
-    color: #cc0000 !important; /* Červený nadpis jako u košíku */
-    border-bottom: none !important; /* Čistší vzhled */
-    font-weight: 900 !important;
-    text-transform: uppercase !important;
-}
-
-/* Tmavé pozadí ZA vyskakovacím oknem přihlášení */
-.dialog.dialog--modal {
-    background: rgba(0, 0, 0, 0.85) !important;
-}
-/* ==========================================
-   OPRAVA 11: ZÁLOŽKY NA ÚVODNÍ STRÁNCE A ŠTÍTKY
-   ========================================== */
-
-/* 1. ZÁLOŽKY (Překlikávání Akční zboží / Novinky) */
-.homepage-tabs-wrapper, .shp-tabs-row, .shp-tabs-holder {
-    background: #000000 !important;
-    border: none !important;
-}
-
-ul.shp-tabs {
-    border-bottom: 2px solid #333333 !important; /* Tmavá linka pod záložkami */
-    margin-bottom: 20px !important;
-}
-
-/* Neaktivní záložka */
-.shp-tabs li.shp-tab {
-    background-color: #111111 !important;
     border: 1px solid #333333 !important;
-    border-bottom: none !important;
-    margin-right: 5px !important;
-    border-radius: 4px 4px 0 0 !important; /* Mírně zakulacené rohy nahoře */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.9) !important;
 }
-
-.shp-tabs li.shp-tab a.shp-tab-link {
-    color: #888888 !important; /* Šedý text, aby nevyřvával */
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    padding: 12px 25px !important;
-    transition: all 0.3s ease !important;
-}
-
-.shp-tabs li.shp-tab:hover a.shp-tab-link {
-    color: #ffffff !important; /* Rozsvítí se při najetí */
-}
-
-/* Aktivní (vybraná) záložka */
-.shp-tabs li.shp-tab.active {
-    background: linear-gradient(180deg, #cc0000 0%, #880000 100%) !important;
-    border-color: #ff0000 !important;
-    box-shadow: 0 -4px 15px rgba(204, 0, 0, 0.5) !important; /* Červená záře nahoru */
-}
-
-.shp-tabs li.shp-tab.active a.shp-tab-link {
+.dialog__heading, #loginHeading, .content-modal h1 {
+    font-family: inherit !important;
+    text-transform: none !important;
     color: #ffffff !important;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8) !important;
-}
-
-/* 2. ŠTÍTKY PŘÍMO NA PRODUKTECH (Novinka, Tip, Akce) */
-.flags .flag {
-    text-transform: uppercase !important;
-    font-weight: 900 !important;
-    border-radius: 2px !important; /* Ostřejší hrany pro agresivnější look */
-    padding: 5px 10px !important;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important; /* Stín, aby vystouply z fotky */
-    letter-spacing: 1px !important;
-}
-
-/* Štítek: Novinka (Wolf-Rage Červená) */
-.flags .flag-new {
-    background-color: #cc0000 !important;
-    color: #ffffff !important;
-    border: 1px solid #ff0000 !important;
-}
-
-/* Štítek: Tip (Temně šedá) */
-.flags .flag-tip {
-    background-color: #1a1a1a !important; 
-    color: #ffffff !important;
-    border: 1px solid #444444 !important;
-}
-
-/* Štítek: Akce / Sleva (Černá s červeným textem) */
-.flags .flag-action, .flags .flag-discount {
-    background-color: #000000 !important;
-    color: #ff0000 !important;
-    border: 1px solid #cc0000 !important;
-}
-
-/* ==========================================
-   NOČNÍ OPRAVA: ŘAZENÍ, BÍLÝ ČTVEREČEK A ZÁLOŽKY
-   ========================================== */
-
-/* 1. ŘAZENÍ (Nejlevnější atd.) - Totální přebití Bootstrap tlačítka */
-.category-header .bootstrap-select.btn-group .btn.btn-default,
-.category-header .bootstrap-select > .btn {
-    background-color: #111111 !important;
-    background: #111111 !important;
-    background-image: none !important;
-    color: #ffffff !important;
-    border: 1px solid #333333 !important;
-    text-shadow: none !important;
-}
-
-/* 2. BÍLÝ ČTVEREČEK ZA SLIDEREM (A oprava posunutí) */
-.price-range, 
-.price-range-filter, 
-.slider-wrapper, 
-.filter-section .price-range-slider {
-    background-color: transparent !important;
-    background: transparent !important;
-    padding-bottom: 10px !important;
-}
-
-/* Srovnání slideru na střed, aby neuhýbal */
-.ui-slider.ui-slider-horizontal {
-    margin: 15px 5px 10px 5px !important;
-}
-
-/* 3. ZÁLOŽKY ÚVODNÍ STRANA (Akce, Novinky - Zničení bílého pozadí odkazu) */
-.homepage-tabs-wrapper .shp-tabs li.shp-tab a.shp-tab-link,
-#homepage-tabs li.shp-tab a.shp-tab-link,
-.shp-tabs li.shp-tab a.shp-tab-link {
-    background-color: transparent !important;
-    background: transparent !important;
-    color: #ffffff !important;
-}
-
-/* Neaktivní záložka celkově */
-.homepage-tabs-wrapper .shp-tabs li.shp-tab,
-#homepage-tabs li.shp-tab {
-    background-color: #111111 !important;
-    background: #111111 !important;
-}
-
-/* Aktivní záložka celkově (Agresivní červená) */
-.homepage-tabs-wrapper .shp-tabs li.shp-tab.active,
-#homepage-tabs li.shp-tab.active,
-.shp-tabs li.shp-tab.active a.shp-tab-link {
-    background-color: #cc0000 !important;
-    background: #cc0000 !important;
-    background-image: linear-gradient(180deg, #cc0000 0%, #880000 100%) !important;
-    color: #ffffff !important;
-}
-
-/* ==========================================
-   WOLF-RAGE: UNIVERZÁLNÍ OPRAVA (MOBIL I PC)
-   ========================================== */
-
-/* 1. SLIDER CENY (Srovnání a odstranění bílého obdélníku) */
-.price-range-filter, .price-range, .slider-wrapper, .filter-section .price-range-slider {
-    background: transparent !important;
-    background-color: transparent !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-.ui-slider.ui-slider-horizontal {
-    margin: 15px 0 !important;
-    background: #222222 !important;
-}
-
-/* 2. TLAČÍTKA ŘAZENÍ (Odstranění bílého pozadí) */
-.btn-sorting, .listSortingControl-name, .listSortingControl-price, .type-control a, .list-type a {
-    background-color: #1a1a1a !important;
-    background: #1a1a1a !important;
-    color: #ffffff !important;
-    border: 1px solid #333333 !important;
-}
-.btn-sorting.active, .listSortingControl-name.active, .type-control a.active, .list-type a.active,
-.btn-sorting:hover, .listSortingControl-name:hover, .type-control a:hover, .list-type a:hover {
-    background-color: #cc0000 !important;
-    border-color: #ff0000 !important;
-    color: #ffffff !important;
-}
-
-/* 3. TLAČÍTKO "DO KOŠÍKU" A "POKRAČOVAT" (Styl jako Detail) */
-.add-to-cart-button, .btn-conversion, button[data-testid="buttonAddToCart"],
-.next-step, .cart-next-step, .order-summary-btn {
-    background-color: #1a1a1a !important;
-    background-image: none !important;
-    color: #ffffff !important;
-    border: 1px solid #cc0000 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    box-shadow: none !important;
-    border-radius: 4px !important;
-    padding: 10px 20px !important;
-    transition: all 0.3s ease !important;
-}
-.add-to-cart-button:hover, .next-step:hover, .order-summary-btn:hover {
-    background-color: #cc0000 !important;
-    box-shadow: 0 0 15px rgba(204, 0, 0, 0.6) !important;
-    color: #ffffff !important;
-}
-
-/* 4. MODAL PŘIHLÁŠENÍ (Čistý vzhled, normální písmo, bez červeného rámečku) */
-.dialog__wrapper, .dialog__content--form, .login-window {
-    background-color: #000000 !important;
-    border: none !important; /* Zrušení červeného rámečku */
-    box-shadow: none !important;
-}
-.dialog__heading, #loginHeading {
-    font-family: inherit !important; /* Standardní font, aby fungovaly háčky */
-    text-transform: none !important; /* Zrušení velkých písmen, pokud dělají problém */
-    color: #ffffff !important;
-    letter-spacing: normal !important;
     border-bottom: 1px solid #222222 !important;
 }
-/* Input (díry na psaní) jako ve vyhledávání */
-.dialog input.form-control, .login-window input.form-control, .input-wrapper input {
-    background-color: #0a0a0a !important;
-    color: #ffffff !important;
-    border: 2px solid #222222 !important;
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.8) !important;
-    padding: 10px !important;
-}
-/* Normalizace Submit tlačítka */
-.dialog .btn-login, .login-window .btn-login, .dialog__body .btn-secondary {
-    background-color: #1a1a1a !important;
-    background-image: none !important;
-    border: 1px solid #333333 !important;
-    width: auto !important; /* Normální velikost */
-    padding: 10px 25px !important;
-    display: block !important;
-}
-.dialog .btn-login:hover {
-    background-color: #cc0000 !important;
-    border-color: #ff0000 !important;
-}
+/* Křížky zavřít */
+.close-button, .dialog__close, .js-close-window, #cboxClose { filter: invert(1); background: transparent !important; border: none !important;}
+/* Zabití bílých okrajů colorboxu */
+#cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft, #cboxMiddleRight, #cboxBottomLeft, #cboxBottomCenter, #cboxBottomRight { background: #000000 !important; border: none !important; }
 
-/* 5. TLAČÍTKO "ZPĚT" (Toggle window) */
-.btn.toggle-window-arr {
-    background-color: #111111 !important;
-    color: #ffffff !important;
-    border: 1px solid #333333 !important;
-    filter: none !important; /* Vypnutí dřívější inverze barev */
+/* --- 8. SYSTÉM ŘAZENÍ A SLIDER CENY (Oprava zmetků) --- */
+.bootstrap-select.btn-group .btn.btn-default, .bootstrap-select > .btn, .bootstrap-select .dropdown-menu, .bootstrap-select .dropdown-menu > li > a, .bootstrap-select .filter-option {
+    background-color: #111111 !important; background: #111111 !important; color: #ffffff !important; border-color: #333333 !important; text-shadow: none !important;
 }
-.btn.toggle-window-arr:hover {
-    background-color: #cc0000 !important;
+.bootstrap-select .dropdown-menu > li.selected > a, .bootstrap-select .dropdown-menu > li > a:hover {
+    background-color: #cc0000 !important; color: #ffffff !important;
 }
+/* Slider */
+.price-range-filter, .price-range, .slider-wrapper, .filter-section .price-range-slider { background: transparent !important; padding: 0 !important; }
+.ui-slider.ui-slider-horizontal { background: #222222 !important; border: none !important; height: 6px !important; margin: 15px 0 !important; }
+.ui-slider .ui-slider-range { background: #cc0000 !important; }
+.ui-slider .ui-slider-handle { background: #ff0000 !important; border: 2px solid #000000 !important; width: 16px !important; height: 16px !important; border-radius: 50% !important; top: -5px !important; outline: none !important; }
 
-/* 6. KOŠÍK - KROKY (1, 2, 3) a POZADÍ */
-.ordering-process, .cart-header, .cart-steps, .step, .cart-step, .navigation-buttons {
-    background-color: #000000 !important;
-    color: #888888 !important; /* Neaktivní kroky šedě */
-}
-.cart-step.active, .step.active, .step.active strong {
-    color: #ffffff !important;
-    border-bottom: 2px solid #cc0000 !important; /* Aktivní krok podtržen červeně */
-}
+/* --- 9. ZÁLOŽKY (Úvod a Detail produktu) --- */
+.homepage-tabs-wrapper, .shp-tabs-wrapper, .tab-content, .tab-pane, #tab-content { background: #000000 !important; border: none !important; }
+.shp-tabs li.shp-tab { background-color: #111111 !important; border: 1px solid #333333 !important; border-bottom: none !important; }
+.shp-tabs li.shp-tab a.shp-tab-link { background: transparent !important; color: #888888 !important; }
+.shp-tabs li.shp-tab.active { background: #cc0000 !important; border-color: #cc0000 !important; }
+.shp-tabs li.shp-tab.active a.shp-tab-link { color: #ffffff !important; }
 
-/* 7. KOŠÍK - VYBRANÁ DOPRAVA A PLATBA (Zvýraznění) */
-.delivery-payment .item.active, 
-.shipping-billing-table tr.active, 
-.shipping-billing-table tr.active td {
-    background-color: #111111 !important;
-    border-top: 1px solid #cc0000 !important;
-    border-bottom: 1px solid #cc0000 !important;
-    box-shadow: inset 5px 0 0 #cc0000 !important; /* Červený proužek zleva */
+/* --- 10. KOŠÍK - PROCES NÁKUPU (Kroky a Tabulka) --- */
+.ordering-process, .cart-header, .cart-steps, .step, .cart-step, .navigation-buttons,
+.cart-table, .cart-table tbody, .cart-table tbody tr, .cart-table tbody td, .cart-table th, .cart-item, .cart-row, .checkout-box, .recapitulation-wrapper, .recapitulation-single {
+    background-color: #000000 !important; border-color: #222222 !important; color: #ffffff !important;
 }
-.shipping-billing-table tr, .shipping-billing-table td {
-    border-color: #222222 !important;
+.cart-step.active, .step.active strong { color: #ffffff !important; border-bottom: 2px solid #cc0000 !important; }
+/* Zabití Zebry a aktivní řádky dopravy */
+.table-striped > tbody > tr:nth-of-type(odd), .cart-table tbody tr:nth-child(odd) { background-color: #050505 !important; }
+.delivery-payment .item.active, .shipping-billing-table tr.active td {
+    background-color: #111111 !important; border-top: 1px solid #cc0000 !important; border-bottom: 1px solid #cc0000 !important; box-shadow: inset 4px 0 0 #cc0000 !important;
 }
-
-/* 8. VYNUCENÍ NA MOBILU */
-@media screen and (max-width: 991px) {
-    html, body, .overall-wrapper, #content-wrapper, .main-content {
-        background-color: #000000 !important;
-        background: #000000 !important;
-    }
-}
+.cart-item-remove, .remove-item, .cart-table .remove a { color: #cc0000 !important; }
 </style>
