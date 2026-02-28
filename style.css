@@ -761,4 +761,131 @@ ul.shp-tabs {
     background-image: linear-gradient(180deg, #cc0000 0%, #880000 100%) !important;
     color: #ffffff !important;
 }
+
+/* ==========================================
+   WOLF-RAGE: UNIVERZÁLNÍ OPRAVA (MOBIL I PC)
+   ========================================== */
+
+/* 1. SLIDER CENY (Srovnání a odstranění bílého obdélníku) */
+.price-range-filter, .price-range, .slider-wrapper, .filter-section .price-range-slider {
+    background: transparent !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.ui-slider.ui-slider-horizontal {
+    margin: 15px 0 !important;
+    background: #222222 !important;
+}
+
+/* 2. TLAČÍTKA ŘAZENÍ (Odstranění bílého pozadí) */
+.btn-sorting, .listSortingControl-name, .listSortingControl-price, .type-control a, .list-type a {
+    background-color: #1a1a1a !important;
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+}
+.btn-sorting.active, .listSortingControl-name.active, .type-control a.active, .list-type a.active,
+.btn-sorting:hover, .listSortingControl-name:hover, .type-control a:hover, .list-type a:hover {
+    background-color: #cc0000 !important;
+    border-color: #ff0000 !important;
+    color: #ffffff !important;
+}
+
+/* 3. TLAČÍTKO "DO KOŠÍKU" A "POKRAČOVAT" (Styl jako Detail) */
+.add-to-cart-button, .btn-conversion, button[data-testid="buttonAddToCart"],
+.next-step, .cart-next-step, .order-summary-btn {
+    background-color: #1a1a1a !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    border: 1px solid #cc0000 !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    padding: 10px 20px !important;
+    transition: all 0.3s ease !important;
+}
+.add-to-cart-button:hover, .next-step:hover, .order-summary-btn:hover {
+    background-color: #cc0000 !important;
+    box-shadow: 0 0 15px rgba(204, 0, 0, 0.6) !important;
+    color: #ffffff !important;
+}
+
+/* 4. MODAL PŘIHLÁŠENÍ (Čistý vzhled, normální písmo, bez červeného rámečku) */
+.dialog__wrapper, .dialog__content--form, .login-window {
+    background-color: #000000 !important;
+    border: none !important; /* Zrušení červeného rámečku */
+    box-shadow: none !important;
+}
+.dialog__heading, #loginHeading {
+    font-family: inherit !important; /* Standardní font, aby fungovaly háčky */
+    text-transform: none !important; /* Zrušení velkých písmen, pokud dělají problém */
+    color: #ffffff !important;
+    letter-spacing: normal !important;
+    border-bottom: 1px solid #222222 !important;
+}
+/* Input (díry na psaní) jako ve vyhledávání */
+.dialog input.form-control, .login-window input.form-control, .input-wrapper input {
+    background-color: #0a0a0a !important;
+    color: #ffffff !important;
+    border: 2px solid #222222 !important;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.8) !important;
+    padding: 10px !important;
+}
+/* Normalizace Submit tlačítka */
+.dialog .btn-login, .login-window .btn-login, .dialog__body .btn-secondary {
+    background-color: #1a1a1a !important;
+    background-image: none !important;
+    border: 1px solid #333333 !important;
+    width: auto !important; /* Normální velikost */
+    padding: 10px 25px !important;
+    display: block !important;
+}
+.dialog .btn-login:hover {
+    background-color: #cc0000 !important;
+    border-color: #ff0000 !important;
+}
+
+/* 5. TLAČÍTKO "ZPĚT" (Toggle window) */
+.btn.toggle-window-arr {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+    filter: none !important; /* Vypnutí dřívější inverze barev */
+}
+.btn.toggle-window-arr:hover {
+    background-color: #cc0000 !important;
+}
+
+/* 6. KOŠÍK - KROKY (1, 2, 3) a POZADÍ */
+.ordering-process, .cart-header, .cart-steps, .step, .cart-step, .navigation-buttons {
+    background-color: #000000 !important;
+    color: #888888 !important; /* Neaktivní kroky šedě */
+}
+.cart-step.active, .step.active, .step.active strong {
+    color: #ffffff !important;
+    border-bottom: 2px solid #cc0000 !important; /* Aktivní krok podtržen červeně */
+}
+
+/* 7. KOŠÍK - VYBRANÁ DOPRAVA A PLATBA (Zvýraznění) */
+.delivery-payment .item.active, 
+.shipping-billing-table tr.active, 
+.shipping-billing-table tr.active td {
+    background-color: #111111 !important;
+    border-top: 1px solid #cc0000 !important;
+    border-bottom: 1px solid #cc0000 !important;
+    box-shadow: inset 5px 0 0 #cc0000 !important; /* Červený proužek zleva */
+}
+.shipping-billing-table tr, .shipping-billing-table td {
+    border-color: #222222 !important;
+}
+
+/* 8. VYNUCENÍ NA MOBILU */
+@media screen and (max-width: 991px) {
+    html, body, .overall-wrapper, #content-wrapper, .main-content {
+        background-color: #000000 !important;
+        background: #000000 !important;
+    }
+}
 </style>
