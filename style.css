@@ -371,3 +371,517 @@ animation:pulse 2s infinite;
 70%{box-shadow:0 0 0 10px rgba(255,0,0,0);}
 100%{box-shadow:0 0 0 0 rgba(255,0,0,0);}
 }
+
+/* ================= */
+/* GLOBAL ELEMENTS */
+/* ================= */
+
+section{
+margin-bottom:40px;
+}
+
+.container{
+max-width:1300px;
+}
+
+/* ================= */
+/* TABLES */
+/* ================= */
+
+table{
+background:#111;
+border-radius:12px;
+overflow:hidden;
+}
+
+td,th{
+border-color:#1c1c1c;
+}
+
+/* ================= */
+/* DROPDOWNS */
+/* ================= */
+
+.dropdown-menu{
+background:#111;
+border:1px solid #222;
+border-radius:10px;
+}
+
+.dropdown-item:hover{
+background:#1a1a1a;
+}
+
+/* ================= */
+/* PAGINATION */
+/* ================= */
+
+.pagination a{
+background:#111;
+border-radius:8px;
+color:white;
+}
+
+.pagination a:hover{
+background:#ff1a1a;
+}
+
+/* ================= */
+/* BREADCRUMBS */
+/* ================= */
+
+.breadcrumb{
+background:#111;
+border-radius:10px;
+padding:10px 15px;
+}
+
+/* ================= */
+/* MODAL / POPUPS */
+/* ================= */
+
+.modal-content{
+background:#111;
+border-radius:16px;
+}
+
+.popup-window{
+background:#111;
+border-radius:16px;
+}
+
+/* ================= */
+/* BLOG / ARTICLES */
+/* ================= */
+
+.blog-post{
+background:#111;
+border-radius:16px;
+padding:25px;
+}
+
+.article{
+background:#111;
+border-radius:16px;
+padding:30px;
+}
+
+/* ================= */
+/* REVIEWS */
+/* ================= */
+
+.review{
+background:#111;
+border-radius:14px;
+padding:20px;
+margin-bottom:15px;
+}
+
+/* ================= */
+/* TABS */
+/* ================= */
+
+.tabs{
+background:#111;
+border-radius:12px;
+padding:10px;
+}
+
+.tab-link.active{
+color:#ff1a1a;
+}
+
+/* ================= */
+/* COOKIE BAR */
+/* ================= */
+
+.cookie-consent{
+background:#000;
+border-top:1px solid #222;
+}
+
+/* ================= */
+/* SEARCH */
+/* ================= */
+
+.search-form input{
+background:#000;
+border:1px solid #333;
+}
+
+/* ================= */
+/* LOGIN / ACCOUNT */
+/* ================= */
+
+.login-form{
+background:#111;
+padding:30px;
+border-radius:16px;
+}
+
+/* ================= */
+/* CHECKOUT */
+/* ================= */
+
+.order-summary{
+background:#111;
+border-radius:14px;
+padding:20px;
+}
+
+/* ========================= */
+/* GLOBAL RESET */
+/* ========================= */
+
+*{
+box-sizing:border-box;
+}
+
+body,
+#wrapper,
+#page,
+#content{
+background:#0a0a0a;
+color:white;
+}
+
+/* ========================= */
+/* HEADINGS */
+/* ========================= */
+
+h1,h2,h3,h4,h5,h6{
+color:white;
+font-weight:800;
+}
+
+/* ========================= */
+/* TEXT */
+/* ========================= */
+
+p{
+color:#ccc;
+}
+
+small{
+color:#888;
+}
+
+/* ========================= */
+/* LINKS */
+/* ========================= */
+
+a{
+color:#ff1a1a;
+text-decoration:none;
+}
+
+a:hover{
+color:#ff4040;
+}
+
+/* ========================= */
+/* CARDS (univerzální) */
+/* ========================= */
+
+.card,
+.box,
+.panel,
+.widget{
+background:#111;
+border-radius:16px;
+border:1px solid #1b1b1b;
+}
+
+/* ========================= */
+/* LISTS */
+/* ========================= */
+
+ul li{
+color:#ddd;
+}
+
+/* ========================= */
+/* BUTTONS (ALL TYPES) */
+/* ========================= */
+
+button,
+input[type="submit"],
+input[type="button"]{
+background:#ff1a1a;
+border:none;
+color:white;
+border-radius:10px;
+padding:12px 20px;
+font-weight:700;
+transition:0.25s;
+}
+
+button:hover,
+input[type="submit"]:hover{
+background:#ff4040;
+transform:scale(1.04);
+}
+
+/* ========================= */
+/* SECONDARY BUTTON */
+/* ========================= */
+
+.btn-secondary{
+background:#222;
+color:white;
+}
+
+.btn-secondary:hover{
+background:#333;
+}
+
+/* ========================= */
+/* FORMS */
+/* ========================= */
+
+input,
+select,
+textarea{
+background:#000;
+border:1px solid #333;
+color:white;
+border-radius:8px;
+padding:10px;
+width:100%;
+}
+
+input:focus,
+textarea:focus{
+border:1px solid #ff1a1a;
+outline:none;
+}
+
+/* ========================= */
+/* TABLES */
+/* ========================= */
+
+table{
+width:100%;
+border-collapse:collapse;
+background:#111;
+border-radius:12px;
+overflow:hidden;
+}
+
+th{
+background:#161616;
+color:white;
+padding:12px;
+}
+
+td{
+padding:12px;
+border-top:1px solid #1c1c1c;
+}
+
+/* ========================= */
+/* ALERTS */
+/* ========================= */
+
+.alert,
+.message{
+background:#111;
+border-left:4px solid #ff1a1a;
+padding:15px;
+border-radius:8px;
+}
+
+/* ========================= */
+/* BADGES */
+/* ========================= */
+
+.badge,
+.label,
+.flag{
+background:#ff1a1a;
+color:white;
+font-weight:700;
+border-radius:6px;
+padding:4px 8px;
+}
+
+/* ========================= */
+/* DROPDOWN */
+/* ========================= */
+
+.dropdown-menu{
+background:#111;
+border:1px solid #222;
+border-radius:12px;
+}
+
+.dropdown-item{
+color:white;
+}
+
+.dropdown-item:hover{
+background:#1a1a1a;
+}
+
+/* ========================= */
+/* PAGINATION */
+/* ========================= */
+
+.pagination{
+margin-top:30px;
+}
+
+.pagination a{
+background:#111;
+color:white;
+padding:10px 14px;
+border-radius:8px;
+margin:4px;
+}
+
+.pagination a:hover{
+background:#ff1a1a;
+}
+
+/* ========================= */
+/* BREADCRUMB */
+/* ========================= */
+
+.breadcrumb{
+background:#111;
+padding:10px 15px;
+border-radius:10px;
+}
+
+/* ========================= */
+/* MODAL */
+/* ========================= */
+
+.modal-content{
+background:#111;
+border-radius:16px;
+border:1px solid #1c1c1c;
+}
+
+/* ========================= */
+/* POPUPS */
+/* ========================= */
+
+.popup-window{
+background:#111;
+border-radius:16px;
+}
+
+/* ========================= */
+/* TOOLTIP */
+/* ========================= */
+
+.tooltip{
+background:#000;
+color:white;
+}
+
+/* ========================= */
+/* TABS */
+/* ========================= */
+
+.tabs{
+background:#111;
+border-radius:12px;
+padding:10px;
+}
+
+.tabs a{
+color:#aaa;
+}
+
+.tabs a.active{
+color:#ff1a1a;
+}
+
+/* ========================= */
+/* ACCORDION */
+/* ========================= */
+
+.accordion{
+background:#111;
+border-radius:12px;
+}
+
+/* ========================= */
+/* SEARCH */
+/* ========================= */
+
+.search input{
+background:#000;
+border:1px solid #333;
+}
+
+/* ========================= */
+/* REVIEWS */
+/* ========================= */
+
+.review{
+background:#111;
+padding:20px;
+border-radius:14px;
+margin-bottom:15px;
+}
+
+/* ========================= */
+/* BLOG */
+/* ========================= */
+
+.article,
+.blog-post{
+background:#111;
+border-radius:16px;
+padding:30px;
+}
+
+/* ========================= */
+/* ACCOUNT */
+/* ========================= */
+
+.account-box{
+background:#111;
+padding:25px;
+border-radius:16px;
+}
+
+/* ========================= */
+/* CHECKOUT */
+/* ========================= */
+
+.checkout-step{
+background:#111;
+padding:25px;
+border-radius:16px;
+}
+
+/* ========================= */
+/* COOKIE BAR */
+/* ========================= */
+
+.cookie-consent{
+background:#000;
+border-top:1px solid #222;
+padding:15px;
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#000;
+}
+
+::-webkit-scrollbar-thumb{
+background:#ff1a1a;
+border-radius:10px;
+}
