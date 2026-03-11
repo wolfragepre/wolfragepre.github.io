@@ -1,226 +1,373 @@
-<style>
-/* =========================================================
-   WOLF-RAGE: COMPLETE FLAT DARK MASTER (PC & MOBIL)
-   ========================================================= */
+/* ============================= */
+/* GLOBAL DESIGN */
+/* ============================= */
 
-/* --- 1. GLOBÁLNÍ TEMNÁ KOSTRA (Nic nevynecháno) --- */
-html, body, body.desktop, .overall-wrapper, #wrapper, #outer-wrapper, 
-.content-wrapper, .content-wrapper-in, #content, .content, .main-content, .wide, 
-.site-wrapper, .container_resetted, .products-page, .products-block, 
-.category-top, .category-header, #category-header, .bg-white, .well,
-#sidebar, .sidebar, .sidebar-left, .box, .box-bg-variant, .box-bg-default,
-#footer, .footer, .footer-bottom, .custom-footer, .footer-standard,
-.cart-header, .cart-inner, .order-summary, .co-box, .checkout-box, #checkoutContent,
-.tab-content, .tab-pane, .shp-tabs-wrapper, .p-detail-tabs-wrapper, .description-inner, .basic-description,
-.content-window, .content-window-in, .cart-window-in, .search-window-in, .m-search-window,
-dialog, dialog[open], .dialog, .dialog__wrapper, .dialog__content, .dialog__content--form, .dialog__body, .dialog__header, .login-window, .modal-content,
-#navigation, .navigation-in, .menu, .menu-level-1, .header-navigation, .overlay, .header-top, .navigation-wrapper,
-#colorbox, #cboxWrapper, #cboxContent, #cboxLoadedContent, .content-modal, .shoptet-modal-sm,
-.cookiesSetting, .cookiesSetting__item, .cookiesSetting__bottom,
-.benefitBanner, .benefitBanner__item, .whisperer, .search-results {
-    background-color: #000000 !important;
-    background: #000000 !important;
-    background-image: none !important;
-    border-color: #222222 !important;
-    box-shadow: none !important;
+body{
+background:#0a0a0a;
+color:#ffffff;
+font-family:Inter,system-ui,sans-serif;
+line-height:1.6;
 }
 
-/* Tvrda tma pro mobilni rozliseni */
-@media screen and (max-width: 991px) {
-    body, html, .overall-wrapper, .content-wrapper, #content, .main-content, .navigation-wrapper { 
-        background-color: #000000 !important; background: #000000 !important; 
-    }
+#wrapper{
+background:#0a0a0a;
 }
 
-/* --- 2. TEXTY, PÍSMO A NADPISY --- */
-body, p, h1, h2, h3, h4, h5, span, li, a, label, div, strong, b, em,
-.product-name, .p-name, .header-contact, .window-title, .menu-item a,
-.dialog__heading, #loginHeading, .content-modal h1, .description,
-.benefitBanner__title, .benefitBanner__data {
-    color: #ffffff !important;
-    font-family: inherit !important; /* Oprava fontů a háčků */
-    text-shadow: none !important;
+a{
+color:#ff1a1a;
+transition:0.25s;
 }
 
-/* Ceny */
-.price-final, .price, .p-total, .cart-summary h3, .total-price, .price-primary, .availability-label, .main-price {
-    color: #cc0000 !important;
-    font-weight: 900 !important;
+a:hover{
+color:#ff4040;
 }
 
-/* Oprava přihlášení (Hlavička dialogu) */
-.dialog__heading, #loginHeading { 
-    border-bottom: 1px solid #333333 !important; 
-    padding-bottom: 15px !important; 
-    margin-bottom: 20px !important; 
-    text-transform: none !important;
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+#header{
+background:#000;
+border-bottom:1px solid #1b1b1b;
 }
 
-/* --- 3. TLAČÍTKA (Sjednoceno do flat designu) --- */
-.btn, .btn-detail, .btn-default, .btn-primary, .btn-secondary, .btn-sorting,
-.add-to-cart-button, .btn-conversion, button[data-testid="buttonAddToCart"],
-.next-step-forward, .order-summary-btn, .next-step, .cart-next-step, #continue-order-button,
-.btn-login, button[type="submit"], .toggle-window-arr,
-.list-type a, .type-control a, .listSortingControl-name, .listSortingControl-price,
-.cookiesSetting__button, .submit-wrapper input {
-    background-color: #111111 !important;
-    color: #ffffff !important;
-    border: 1px solid #cc0000 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    border-radius: 4px !important;
-    padding: 10px 20px !important;
-    box-shadow: none !important;
-    background-image: none !important;
-    transition: all 0.2s ease !important;
-    display: inline-block !important;
-    width: auto !important;
+.site-name img{
+max-height:55px;
 }
 
-/* Hover na tlačítka (zčervenají) */
-.btn:hover, .btn-detail:hover, .btn-default:hover, .btn-primary:hover, .btn-secondary:hover, .btn-sorting:hover,
-.add-to-cart-button:hover, .btn-conversion:hover, .next-step-forward:hover, .order-summary-btn:hover, .next-step:hover,
-.btn-login:hover, .toggle-window-arr:hover, .list-type a:hover, .type-control a:hover, .listSortingControl-name:hover, .listSortingControl-price:hover,
-.btn-sorting.active, .type-control a.active, .list-type a.active, .listSortingControl-name.active, .listSortingControl-price.active {
-    background-color: #cc0000 !important;
-    color: #ffffff !important;
-    border-color: #ff0000 !important;
+.header-tools a{
+color:white;
 }
 
-/* --- 4. FORMULÁŘE, INPUTY A VYHLEDÁVÁNÍ --- */
-input.form-control, select.form-control, textarea.form-control, .quantity input.amount,
-.search-input, .input-wrapper input, .dialog input.form-control, .login-window input.form-control {
-    background-color: #0a0a0a !important;
-    color: #ffffff !important;
-    border: 1px solid #333333 !important;
-    border-radius: 4px !important;
-    padding: 12px !important;
-    box-shadow: none !important;
-}
-input.form-control:focus, select.form-control:focus, textarea.form-control:focus {
-    border-color: #cc0000 !important;
-    outline: none !important;
-}
-/* Zrušení ošklivých rámečků okolo přihlášení */
-.dialog__wrapper, .dialog__content, .dialog__content--form, .login-window { 
-    border: none !important; 
-    padding: 15px !important; 
+/* ============================= */
+/* MENU */
+/* ============================= */
+
+.navigation{
+background:#000;
 }
 
-/* --- 5. ŘAZENÍ, KATEGORIE A BOOTSTRAP ROLETKY --- */
-.bootstrap-select .btn, .bootstrap-select .dropdown-menu, .bootstrap-select .filter-option, 
-.bootstrap-select.btn-group .btn.btn-default, .sorting-wrapper select {
-    background-color: #111111 !important; 
-    color: #ffffff !important; 
-    border: 1px solid #333333 !important; 
-    box-shadow: none !important; 
-    text-shadow: none !important;
-}
-.bootstrap-select .dropdown-menu > li > a { 
-    background: transparent !important; 
-    color: #ffffff !important; 
-}
-.bootstrap-select .dropdown-menu > li.selected > a, .bootstrap-select .dropdown-menu > li > a:hover { 
-    background-color: #cc0000 !important; 
-    color: #ffffff !important; 
+.navigation a{
+color:white;
+font-weight:600;
+letter-spacing:0.5px;
 }
 
-/* --- 6. OPRAVA SLIDERU CENY (Zabita bílá, srovnáno) --- */
-.price-range-filter, .price-range, .slider-wrapper, .filter-section .price-range-slider, .ui-widget-content {
-    background-color: transparent !important; 
-    background: transparent !important; 
-    border: none !important; 
-    padding: 0 !important; 
-    margin: 0 !important;
-}
-.ui-slider.ui-slider-horizontal { 
-    background: #222222 !important; 
-    border: none !important; 
-    height: 4px !important; 
-    margin: 15px 5px !important; 
-}
-.ui-slider .ui-slider-range { background: #cc0000 !important; }
-.ui-slider .ui-slider-handle { 
-    background: #ff0000 !important; 
-    border: none !important; 
-    border-radius: 50% !important; 
-    outline: none !important; 
-    top: -6px !important; 
+.navigation a:hover{
+color:#ff1a1a;
 }
 
-/* --- 7. KOŠÍK - TABULKY, KROKY, DOPRAVA A PLATBA --- */
-.cart-table, .cart-table tbody, .cart-table tr, .cart-table td, .cart-item,
-.shipping-billing-table, .shipping-billing-table tr, .shipping-billing-table td,
-.order-summary-item, .recapitulation-single, .delivery-payment {
-    background-color: #000000 !important; 
-    border-color: #222222 !important; 
-    color: #ffffff !important;
-}
-/* Velmi jemná zebra pro orientaci v řádcích */
-.table-striped > tbody > tr:nth-of-type(odd), .cart-table tbody tr:nth-child(odd) { 
-    background-color: #080808 !important; 
+/* ============================= */
+/* HERO BANNER */
+/* ============================= */
+
+.carousel{
+border-radius:16px;
+overflow:hidden;
+margin-top:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* Kroky (1, 2, 3) */
-.cart-header, .cart-steps, .cart-header .step, .cart-steps .step, .ordering-process {
-    background-color: #000000 !important; 
-    border-bottom: 1px solid #222222 !important;
-}
-.cart-header .step span, .cart-steps .step span, .cart-header .step a, .cart-steps .step a, .step strong { 
-    color: #666666 !important; 
-}
-.cart-header .step.active, .cart-steps .step.active, .cart-header .step.active span, .cart-steps .step.active span, .step.active strong {
-    color: #ffffff !important; 
-    border-bottom: 2px solid #cc0000 !important;
+/* ============================= */
+/* PRODUCT GRID */
+/* ============================= */
+
+.products{
+gap:20px;
 }
 
-/* Vybraná Doprava a Platba */
-.radio-wrapper.active, .shipping-billing-table tr.active, .shipping-billing-table tr.active td {
-    background-color: #111111 !important; 
-    border-left: 3px solid #cc0000 !important;
+.product{
+background:#111;
+border-radius:16px;
+padding:15px;
+border:1px solid #1c1c1c;
+transition:0.25s;
+position:relative;
 }
 
-/* --- 8. ZÁLOŽKY (ÚVODNÍ STRANA A DETAIL PRODUKTU) --- */
-.homepage-tabs-wrapper .shp-tabs li.shp-tab, #homepage-tabs li.shp-tab, .shp-tabs li.shp-tab {
-    background-color: #111111 !important; 
-    border: 1px solid #333333 !important; 
-    border-bottom: none !important;
-}
-.homepage-tabs-wrapper .shp-tabs li.shp-tab a.shp-tab-link, .shp-tabs li.shp-tab a.shp-tab-link { 
-    background: transparent !important; 
-    color: #888888 !important; 
-}
-.homepage-tabs-wrapper .shp-tabs li.shp-tab.active, .shp-tabs li.shp-tab.active { 
-    background-color: #cc0000 !important; 
-    border-color: #ff0000 !important; 
-}
-.homepage-tabs-wrapper .shp-tabs li.shp-tab.active a.shp-tab-link, .shp-tabs li.shp-tab.active a.shp-tab-link { 
-    color: #ffffff !important; 
+.product:hover{
+transform:translateY(-6px);
+border:1px solid #ff1a1a;
+box-shadow:0 12px 35px rgba(255,0,0,0.25);
 }
 
-/* --- 9. PRODUKTY, ŠTÍTKY, COLORBOX A IKONY --- */
-.product .p { 
-    background: #050505 !important; 
-    border: 1px solid #1a1a1a !important; 
-    border-radius: 4px !important; 
-}
-.product .p:hover { border-color: #cc0000 !important; }
+/* IMAGE */
 
-/* Štítky (Novinka, Tip) */
-.flags .flag { text-transform: uppercase !important; font-weight: 900 !important; padding: 4px 8px !important; border-radius: 2px !important; }
-.flags .flag-new { background-color: #cc0000 !important; color: #ffffff !important; border: 1px solid #ff0000 !important; }
-.flags .flag-tip { background-color: #111111 !important; color: #ffffff !important; border: 1px solid #444444 !important; }
-
-/* Křížky zavřít (přebarvení na bílo) */
-.close-button, .dialog__close, .js-close-window, .menu-helper, .toggle-window-arr::before, #cboxClose { 
-    filter: invert(1) !important; 
-    background: transparent !important; 
-    border: none !important; 
+.product-image img{
+border-radius:12px;
 }
 
-/* Dotaz na prodejce (Colorbox) ohraničení */
-#cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft, #cboxMiddleRight, #cboxBottomLeft, #cboxBottomCenter, #cboxBottomRight { 
-    background: #000000 !important; 
-    border: none !important; 
+/* PRODUCT NAME */
+
+.product-name{
+font-size:16px;
+font-weight:700;
+color:white;
+margin-top:10px;
 }
-</style>
+
+/* PRICE */
+
+.product-price{
+font-size:22px;
+font-weight:900;
+color:#ff1a1a;
+margin-top:6px;
+}
+
+/* PRODUCT DESCRIPTION */
+
+.product-description{
+color:#aaa;
+font-size:14px;
+}
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+.btn{
+border-radius:10px;
+font-weight:700;
+transition:0.25s;
+}
+
+.btn-primary{
+background:#ff1a1a;
+border:none;
+color:white;
+}
+
+.btn-primary:hover{
+background:#ff4040;
+transform:scale(1.05);
+}
+
+/* ============================= */
+/* ADD TO CART */
+/* ============================= */
+
+.add-to-cart{
+margin-top:10px;
+}
+
+.btn-primary{
+padding:12px 18px;
+}
+
+/* ============================= */
+/* PRODUCT DETAIL */
+/* ============================= */
+
+.product-detail{
+background:#111;
+padding:35px;
+border-radius:18px;
+border:1px solid #1c1c1c;
+}
+
+.product-detail-name{
+font-size:34px;
+font-weight:900;
+}
+
+.product-detail-price{
+font-size:30px;
+font-weight:900;
+color:#ff1a1a;
+margin-top:10px;
+}
+
+/* GALLERY */
+
+.product-gallery img{
+border-radius:14px;
+}
+
+/* ============================= */
+/* QUANTITY */
+/* ============================= */
+
+.quantity input{
+background:#000;
+border:1px solid #333;
+color:white;
+border-radius:8px;
+padding:8px;
+}
+
+/* ============================= */
+/* CATEGORY */
+/* ============================= */
+
+.category-header{
+background:#111;
+border-radius:16px;
+padding:25px;
+margin-bottom:20px;
+}
+
+.category-title{
+font-size:28px;
+font-weight:800;
+}
+
+/* ============================= */
+/* FILTER SIDEBAR */
+/* ============================= */
+
+.sidebar{
+background:#111;
+border-radius:14px;
+padding:20px;
+border:1px solid #1b1b1b;
+}
+
+.filter-title{
+font-weight:700;
+margin-bottom:8px;
+}
+
+/* ============================= */
+/* BADGES */
+/* ============================= */
+
+.flag{
+background:#ff1a1a;
+color:white;
+font-weight:700;
+padding:4px 8px;
+border-radius:6px;
+}
+
+/* ============================= */
+/* CART */
+/* ============================= */
+
+.cart-table{
+background:#111;
+border-radius:14px;
+overflow:hidden;
+border:1px solid #1c1c1c;
+}
+
+.cart-summary{
+background:#111;
+border-radius:14px;
+padding:20px;
+}
+
+/* ============================= */
+/* INPUTS */
+/* ============================= */
+
+input,
+select,
+textarea{
+background:#000;
+border:1px solid #333;
+color:white;
+border-radius:8px;
+padding:10px;
+}
+
+input:focus{
+border:1px solid #ff1a1a;
+outline:none;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+#footer{
+background:#000;
+border-top:1px solid #1b1b1b;
+margin-top:60px;
+padding-top:40px;
+}
+
+.footer a{
+color:#aaa;
+}
+
+.footer a:hover{
+color:#ff1a1a;
+}
+
+/* ============================= */
+/* SCROLLBAR */
+/* ============================= */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#000;
+}
+
+::-webkit-scrollbar-thumb{
+background:#ff1a1a;
+border-radius:10px;
+}
+
+/* ============================= */
+/* CTA PULSE EFFECT */
+/* ============================= */
+
+.btn-primary{
+animation:pulse 2.5s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(255,0,0,0.6);}
+70%{box-shadow:0 0 0 12px rgba(255,0,0,0);}
+100%{box-shadow:0 0 0 0 rgba(255,0,0,0);}
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media(max-width:768px){
+
+.product{
+padding:12px;
+}
+
+.product-detail{
+padding:20px;
+}
+
+.product-detail-name{
+font-size:26px;
+}
+
+}
+
+/* ============================= */
+/* HOVER MICROINTERACTIONS */
+/* ============================= */
+
+.product-image img{
+transition:0.3s;
+}
+
+.product:hover .product-image img{
+transform:scale(1.05);
+}
+
+.products{
+grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+}
+
+.btn-primary{
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(255,0,0,0.6);}
+70%{box-shadow:0 0 0 10px rgba(255,0,0,0);}
+100%{box-shadow:0 0 0 0 rgba(255,0,0,0);}
+}
